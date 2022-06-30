@@ -8,10 +8,8 @@ class Solution:
             s1Count[ord(s1[i])-ord('a')] += 1
             s2Count[ord(s2[i]) - ord('a')] += 1   
 
-        i, right = 0, win-1
-        
-        if len(s2)==win: return (s1Count==s2Count)
-        
+        i = 0
+                
         for right in range(len(s1), len(s2)):
             if s1Count==s2Count:
                 return True
